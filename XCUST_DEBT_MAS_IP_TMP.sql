@@ -1,12 +1,11 @@
---------------------------------------------------------
---  File created - Friday-October-20-2023   
---------------------------------------------------------
---------------------------------------------------------
---  DDL for View XCUST_DEBT_MAS_IP_TMP
---------------------------------------------------------
-
-  CREATE OR REPLACE FORCE EDITIONABLE VIEW "APPS"."XCUST_DEBT_MAS_IP_TMP" ("DEBT_ID", "DEBT_NO", "VENDOR_ID", "DEBT_TYPE_FIN", "START_DATE", "END_DATE", "DEBT_AMOUNT", "BALANCE_AMOUNT", "STATUS", "ORG_ID", "LAST_UPDATE_DATE", "LAST_UPDATED_BY", "CREATED_BY", "CREATION_DATE", "PAY_DATE", "DEBT_PAY_ID") AS 
-  select distinct m.debt_id ,
+﻿CREATE OR REPLACE FORCE VIEW APPS.XCUST_DEBT_MAS_IP_TMP
+(DEBT_ID, DEBT_NO, VENDOR_ID, DEBT_TYPE_FIN, START_DATE, 
+ END_DATE, DEBT_AMOUNT, BALANCE_AMOUNT, STATUS, ORG_ID, 
+ LAST_UPDATE_DATE, LAST_UPDATED_BY, CREATED_BY, CREATION_DATE, PAY_DATE, 
+ DEBT_PAY_ID)
+BEQUEATH DEFINER
+AS 
+select distinct m.debt_id ,
 m.DEBT_NO,
 m.VENDOR_ID,
 m.DEBT_TYPE_FIN,
